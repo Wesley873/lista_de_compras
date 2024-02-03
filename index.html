@@ -11,9 +11,12 @@
     <p>Aqui podes adicionar itens a sua lista de compras</p>
     <div id="lista"></div>
     <div>
-        <div>
+        <div id="dados-item">
             <input type="text" id="item" placeholder="item">
-            <input type="number" name="preco" id="preco" placeholder="1,99">
+            <div id="div-preco">
+                <label for="preco" id="label-preco">R$</label>
+                <input type="number" name="preco" id="preco" placeholder="1,99">
+            </div>
             <input type="number" name="" id="quantidade" placeholder="1">
             <select title="unidade" id="unidade">
                 <option value="kg" selected>Kg</option>
@@ -21,7 +24,9 @@
                 <option value="un">unidade</option>
             </select>
         </div>
-        <button type="button" id="adicionar">Adicionar</button>
+        <div id="button">
+            <button type="button" id="adicionar">Adicionar</button>
+        </div>
     </div>
     <p><a href="pagina2.html">Pagina 2</a></p>
     <script type="module" src="src/js/index.js"></script>

@@ -1,17 +1,68 @@
-body{
+body {
     background-color: rgb(54, 54, 54);
 }
 
-h1{
-    color: white;
-    text-align: center;
-}
-p{
+h1 {
     color: white;
     text-align: center;
 }
 
-#item, #preco, #quantidade, #unidade{
-    width: 23vw;
+p {
+    color: white;
+    text-align: center;
+}
+
+#dados-item{
+    display: flex;
+    justify-content: space-around;
+}
+
+#item,
+#preco,
+#quantidade,
+#unidade {
+    /* width: 23vw; */
     box-sizing: border-box;
+}
+
+#item {
+    width: 40vw;
+    /* margin-right: 2vw; */
+}
+#div-preco{
+    display: flex;
+}
+#label-preco{
+    width: 25px;
+    display: flex;
+    border: 1px solid grey;
+    color: gray;
+    background-color: white;
+    border-radius: 2px;
+    border-right: none;
+    margin-right: -4px;
+}
+
+#preco {
+    margin-left: -1px;
+    width: 15vw;
+    border: 1px solid grey;
+    border-left: none;
+    border-radius: 2px;
+}
+
+#quantidade {
+    width: 15vw;
+    /* margin-right: 2vw; */
+}
+
+#unidade {
+    width: 15vw;
+    /* margin-right: 2vw; */
+}
+
+#button{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
 }
