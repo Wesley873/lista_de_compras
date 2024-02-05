@@ -2,9 +2,29 @@ body {
     background-color: rgb(54, 54, 54);
 }
 
+
+
 h1 {
     color: white;
     text-align: center;
+}
+
+#subtotal {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    align-items: center;
+}
+
+#subtotal div {
+    width: 29vw;
+}
+.valores{
+    width: 95%;
+}
+
+#subtotal label {
+    color: white;
 }
 
 p {
@@ -12,26 +32,31 @@ p {
     text-align: center;
 }
 
-#dados-item{
+#dados-item {
     display: flex;
     justify-content: space-around;
 }
 
-#item {
-    width: 40vw;
-}
-#div-preco{
+#div-preco,
+#div-disponivel {
     display: flex;
 }
-#label-preco{
+#disponivel{
+    border: 1px solid grey;
+    border-color: gray;
+    border-radius: 2px;
+    border-left: none;
+}
+
+#label-preco,
+#label-disponivel {
     width: 25px;
     display: flex;
     border: 1px solid grey;
-    color: gray;
     background-color: white;
     border-radius: 2px;
     border-right: none;
-    margin-right: -4px;
+    margin-right: -1px;
 }
 
 #preco {
@@ -42,16 +67,52 @@ p {
     border-radius: 2px;
 }
 
+#item {
+    width: 25vw;
+}
+
 #quantidade {
-    width: 15vw;
+    width: 8vw;
+}
+
+#embalagem {
+    width: 10vw;
 }
 
 #unidade {
-    width: 15vw;
+    width: 10vw;
 }
 
-#button{
+#button {
     margin-top: 10px;
     display: flex;
     justify-content: center;
+}
+
+#lista {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+table,
+td,
+th {
+    border: 1px solid;
+    font-size: smaller;
+}
+
+.oculto {
+    display: none;
+}
+
+table {
+
+    color: white;
+    border-collapse: collapse;
+}
+
+ .sifrao{
+    color: black !important;
 }
