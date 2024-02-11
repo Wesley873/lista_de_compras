@@ -10,22 +10,54 @@
 
 <body>
     <!-- MODAL  -->
-    <div class="modal-content">
-        <div class="modal-header">
-            <span class="close">&times;</span>
-            <h2>Modal Header</h2>
+    <dialog id="modal">
+        <div id="modal-header">
+            <h1 id="titulo-modal">Editar item</h1>
+            <button type="button" id="fechar">&#88</button>
         </div>
-        <div class="modal-body">
-            <p>Some text in the Modal Body</p>
-            <p>Some other text...</p>
-        </div>
-        <div class="modal-footer">
-            <h3>Modal Footer</h3>
-        </div>
-    </div>
-    <!-- MODAL -->
+        <div id="modal-body">
+            <div id="conteudo">
+                <div id="div-tabela">
+                    <table id="tabela-produto">
+                        <tr class="linha">
+                            <th>Nome</th>
+                            <td class="coluna" colspan="2"><input type="text" name="" id="nome" placeholder="nome"></td>
+                        </tr>    
+                        <tr class="linha">
+                            <th>Preço</th>
+                            <td class="coluna" colspan="2"><input type="number" name="" id="preco" placeholder="preco"></td>
+                        </tr>
+                        <tr class="linha">
+                            <th>Quantidade</th>
+                            <td class="coluna" colspan="2"><input type="number" name="" id="quantidade" placeholder="quantidade"></td>
+                        </tr>
+                        <tr class="linha">
+                            <th>Embalagem</th>
+                            <td class="coluna"><input type="number" name="" id="embalagem" placeholder="embalagem"></td>
+                            <td>
+                                <select name="" id="medida">
+                                    <option value="kg">kg</option>
+                                    <option value="gr">gr</option>
+                                    <option value="lt">lt</option>
+                                    <option value="ml">ml</option>
+                                    <option value="un">un</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="linha">
 
-    <h1>Lista de compras</h1>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="modal-footer">
+            <button type="button" id="salvar">Salvar</button>
+        </div>
+    </dialog>
+    <!-- /MODAL -->
+    <h1 id="titulo-pagina">Lista de compras</h1>
     <div id="subtotal">
         <div>
             <label for="div-disponivel">Valor disponível</label>
@@ -43,9 +75,9 @@
             <input class="valores" type="text" id="saldo" placeholder="R$ 0,01" disabled>
         </div>
     </div>
-    <p>Aqui podes adicionar itens a sua lista de compras</p>
+    <p id="mensagem-instrucao">Aqui podes adicionar itens a sua lista de compras</p>
     <div id="lista">
-        <table id="tabela" class="oculto">
+        <table id="tabela-lista" class="oculto">
             <thead>
                 <tr>
                     <th>Item</th>
@@ -60,21 +92,6 @@
         </table>
     </div>
     <div>
-        <div id="dados-item">
-            <input type="text" id="item" placeholder="item">
-            <input type="number" name="" id="quantidade" placeholder="1">
-            <div id="div-preco">
-                <label class="sifrao" for="preco" id="label-preco">R$</label>
-                <input type="number" name="preco" id="preco" placeholder="0,01">
-            </div>
-            <input type="number" id="embalagem" placeholder="Embalagem">
-            <select title="unidade" id="unidade">
-                <option value="kg" selected>Kg</option>
-                <option value="ml">ml</option>
-                <option value="g">g</option>
-                <option value="un">un</option>
-            </select>
-        </div>
         <div id="button">
             <button type="button" id="adicionar">Adicionar</button>
         </div>

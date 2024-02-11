@@ -1,0 +1,29 @@
+#conteudo {
+    width: 350px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#div-tabela {
+    border: 1px solid black;
+    display: flex;
+    width: 90%;
+    justify-content: center;
+}
+
+#editar-produto,
+.linha,
+.coluna {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#editar-produto input {
+    border: none;
+}
+
+.coluna input {
+    width: 90%;
+}
