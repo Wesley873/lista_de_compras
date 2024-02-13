@@ -12,6 +12,7 @@ const adicionar = document.querySelector('#adicionar')
 const modal = document.querySelector('#modal');
 
 
+
 fechar.onclick = () => {
     modal.close();
 }
@@ -50,6 +51,7 @@ function atualizaLista() {
 adicionar.onclick = function () {
     modal.showModal();
     document.querySelector('#titulo-modal').innerText = 'Adicionar item';
+
 }
 
 salvar.onclick = function () {
@@ -77,14 +79,31 @@ document.addEventListener('click', (evento) => {
     const id = evento.target.id
     if (evento.target.classList[0] === 'editar-produto') {
         modal.showModal();
-        document.querySelector('#titulo-modal').innerText = `Editar item ${id}`;
-        document.querySelector('#nome').value = listaProdutos[id-1].name;
-        document.querySelector('#preco').value = listaProdutos[id-1].price;
-        document.querySelector('#quantidade').value = listaProdutos[id-1].quantity;
-        document.querySelector('#embalagem').value = listaProdutos[id-1].packaging;
-        document.querySelector('#medida').value = listaProdutos[id-1].unitOfMeasurement;
+        const tituloModal = document.querySelector('#titulo-modal');
+        tituloModal.innerText = `Editar item ${id}`;
+        const nome = document.querySelector('#nome');
+        nome.value = listaProdutos[id - 1].name;
+        const preco = document.querySelector('#preco');
+        preco.value = listaProdutos[id - 1].price;
+        const quantidade = document.querySelector('#quantidade');
+        quantidade.value = listaProdutos[id - 1].quantity;
+        const embalagem = document.querySelector('#embalagem');
+        embalagem.value = listaProdutos[id - 1].packaging;
+        const medida = document.querySelector('#medida');
+        medida.value = listaProdutos[id - 1].unitOfMeasurement;
+        const atualizar = document.querySelector('#modal-footer');
+        atualizar.innerHTML = `<button type="button" id="atualizar">Atualizar</button>`;
+        atualizar.onclick = () => {
+            listaProdutos[id - 1].name = nome.value;
+            listaProdutos[id - 1].packaging = embalagem.value
+            listaProdutos[id - 1].price = preco.value
+            listaProdutos[id - 1].quantity = quantidade.value
+            listaProdutos[id - 1].unitOfMeasurement = medida.value;
+            console.log(listaProdutos[id - 1]);
+            atualizaLista();
+            modal.close();
+        }
 
-        console.log(listaProdutos[id-1]);
     }
 
 });
