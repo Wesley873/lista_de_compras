@@ -9,9 +9,59 @@
 </head>
 
 <body>
-    <!-- MODAL  -->
-    <dialog id="modal">
+    <!-- MODAL ADICIONAR ITEM-->
+    <dialog id="modal-adicionar" class="modal">
         <div id="modal-header">
+            <h1 class="titulo-modal">Adicionar item</h1>
+            <button type="button" id="fechar">&#88</button>
+        </div>
+        <div id="modal-body">
+            <div id="conteudo">
+                <div id="div-tabela">
+                    <table id="tabela-produto">
+                        <tr class="linha">
+                            <th>Nome</th>
+                            <td class="coluna" colspan="2"><input type="text" name="" id="nome" placeholder="nome"></td>
+                        </tr>
+                        <tr class="linha">
+                            <th>Preço</th>
+                            <td class="coluna" colspan="2"><input type="number" name="" id="preco" placeholder="preco">
+                            </td>
+                        </tr>
+                        <tr class="linha">
+                            <th>Quantidade</th>
+                            <td class="coluna" colspan="2"><input type="number" name="" id="quantidade"
+                                    placeholder="quantidade"></td>
+                        </tr>
+                        <tr class="linha">
+                            <th>Embalagem</th>
+                            <td class="coluna"><input type="number" name="" id="embalagem" placeholder="embalagem"></td>
+                            <td>
+                                <select name="" id="medida">
+                                    <option value="kg">kg</option>
+                                    <option value="gr">gr</option>
+                                    <option value="lt">lt</option>
+                                    <option value="ml">ml</option>
+                                    <option value="un">un</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="linha">
+
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="modal-footer" class="modal-footer">
+            <button type="button" id="salvar">Salvar</button>
+        </div>
+    </dialog>
+    <!-- /MODAL -->
+    <!-- MODAL EDITAR ITEM-->
+    <dialog id="modal-editar" class="modal">
+        <div class="modal-header">
             <h1 id="titulo-modal">Editar item</h1>
             <button type="button" id="fechar">&#88</button>
         </div>
@@ -55,10 +105,12 @@
         </div>
         </div>
         <div id="modal-footer">
-            <button type="button" id="salvar">Salvar</button>
+            <button type="button" id="alterar">Salvar</button>
         </div>
     </dialog>
+    
     <!-- /MODAL -->
+
     <h1 id="titulo-pagina">Lista de compras</h1>
     <div id="subtotal">
         <div>

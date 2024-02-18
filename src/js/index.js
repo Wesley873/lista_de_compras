@@ -8,8 +8,9 @@ const CorpoTabela = document.querySelector('#corpo-tabela');
 const total = document.querySelector('#total');
 const fechar = document.querySelector('#fechar');
 const salvar = document.querySelector('#salvar');
-const adicionar = document.querySelector('#adicionar')
-const modal = document.querySelector('#modal');
+const adicionar = document.querySelector('#adicionar');
+const modalEditar = document.querySelector('#modal-editar');
+const modalAdicionar = document.querySelector('#modal-adicionar');
 
 
 
@@ -49,9 +50,7 @@ function atualizaLista() {
 }
 
 adicionar.onclick = function () {
-    modal.showModal();
-    document.querySelector('#titulo-modal').innerText = 'Adicionar item';
-
+    modalAdicionar.showModal();
 }
 
 salvar.onclick = function () {

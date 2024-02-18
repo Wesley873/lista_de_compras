@@ -5,7 +5,7 @@ body {
 
 /* --------------- Estilização do Modal --------------- */
 
-#modal {
+.modal {
     width: 90%;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
@@ -15,12 +15,12 @@ body {
     box-shadow: 0px 0px 15px 0px white;
 }
 
-#modal::backdrop{
+.modal::backdrop{
     background-color: rgba(200, 200, 200, 0.8);
 
 }
 
-#modal-header{
+.modal-header{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -32,14 +32,14 @@ body {
     font-weight: bold;
 }
 
-#modal-footer {
+.modal-footer {
     display: flex;
     justify-content: center;
     margin-top: 10px;
     align-items: center;
 }
 
-#titulo-modal {
+.titulo-modal {
     margin-top: -5px;
     text-align: center;
     color: black;
